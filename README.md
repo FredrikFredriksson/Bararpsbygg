@@ -9,4 +9,6 @@ Is a professional carpentry firm specializing in high-quality woodwork, construc
 - **Email**: [coming soon]
 - **Website**: [coming soon]
 
+- To install the package, use the `npm install` command.
+
 
