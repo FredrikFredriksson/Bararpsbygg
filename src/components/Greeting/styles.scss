@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.main__greet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: auto;
+    font-family: roboto , sans-serif;
+    max-width: 900px;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+   
+}
+
+.booking__button {
+    background-color: #54595F00;
+    border: 2px solid #54595F;
+    padding: 15px 40px;
+    color: #54595F; 
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    cursor: pointer; 
+}
+.booking__button:hover {
+    background-color: #54595F; 
+    color: #FFFFFF; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.main__greet h2{
+   font-size: 41px;
+   font-weight: 500;
+}
+
+.main__greet h3{
+    font-weight: 500;
+}
+
