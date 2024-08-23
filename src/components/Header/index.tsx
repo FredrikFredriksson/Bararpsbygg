@@ -1,16 +1,33 @@
+import React, { useEffect, useState } from "react";
 import "./styles.scss";
 import instaG from "../../assets/instagram.png";
+import headLogo from '../../assets/logga.jpg';
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-function Header() {
+const Header: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setIsScrolled(offset > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="header">
+    <div className={`header ${isScrolled ? "header--scrolled" : ""}`}>
       <div className="header__controls">
         <div className="header__logo" onClick={scrollToTop}>
-          Bårarps bygg
+          <img src={headLogo} alt="Bårarps bygg" className="header__logo-image" />
         </div>
         <div className="header__nav">
           <a href="#home" className="header__nav-link">

@@ -2,6 +2,7 @@
 import "./styles.scss";
 import Header from "../../components/Header";
 import Greetings from "../../components/Greeting";
+import Info from "../../components/Info";
 
 function Main() {
   return <div className="main">
@@ -9,7 +10,9 @@ function Main() {
         <Header/>
         <Greetings/>
     </div>
-    <div className="info"></div>
+    <div className="info">
+      <Info/>
+    </div>
   </div>;
 }
 
