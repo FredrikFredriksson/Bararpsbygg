@@ -1,0 +1,25 @@
+.card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 40px;
+  
+    &__left {
+      width: 50%;
+      position: relative;
+  
+      /* Maintain the 16:9 aspect ratio */
+      padding-top: calc(50% * 9 / 16); /* Equivalent to padding-top: 56.25% */
+     
+    }
+  
+    &__right {
+      width: 50%; 
+      padding-top: calc(50% * 9 / 16)
+    }
+  } 
+
+  .card__wrap{
+    display: flex;
+  }
