@@ -10,6 +10,7 @@
     top: 0;
     background-color: transparent;
     transition: background-color 0.3s ease-in-out;
+    z-index: 10;
   
     &--scrolled {
       background-color: #ffffff; // Change to white when scrolled
