@@ -5,6 +5,7 @@ import Info from "../../components/Info";
 import Card from "../../components/Card";
 import Banner from "../../components/Banner";
 import Contact from "../../components/Contact";
+import Message from "../../components/Message";
 
 function Main() {
   return (
@@ -24,6 +25,9 @@ function Main() {
       </div>
       <div className="contacts">
         <Contact />
+      </div>
+      <div className="messages">
+        <Message />
       </div>
     </div>
   );
