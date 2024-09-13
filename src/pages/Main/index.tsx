@@ -6,6 +6,7 @@ import Card from "../../components/Card";
 import Banner from "../../components/Banner";
 import Contact from "../../components/Contact";
 import Message from "../../components/Message";
+import Footer from "../../components/Footer";
 
 function Main() {
   return (
@@ -28,6 +29,9 @@ function Main() {
       </div>
       <div className="messages">
         <Message />
+      </div>
+      <div className="footers">
+        <Footer/>
       </div>
     </div>
   );

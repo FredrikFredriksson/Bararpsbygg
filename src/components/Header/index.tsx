@@ -9,6 +9,8 @@ function scrollToTop() {
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,34 +25,61 @@ const Header: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className={`header ${isScrolled ? "header--scrolled" : ""}`}>
+      {isMobileMenuOpen && <div className="header__overlay" onClick={() => setIsMobileMenuOpen(false)}></div>}
+
       <div className="header__controls">
         <div className="header__logo" onClick={scrollToTop}>
-          <img src={headLogo} alt="Bårarps bygg" className="header__logo-image" />
+          <img src={headLogo} alt="Bårarps bygg logo" className="header__logo-image" />
         </div>
-        <div className="header__nav">
-          <a href="#home" className="header__nav-link">
-            OM OSS
-          </a>
-          <a href="#about" className="header__nav-link">
-            INOMHUS
-          </a>
-          <a href="#services" className="header__nav-link">
-            UTOMHUS
-          </a>
-          <a href="#contact" className="header__nav-link">
-            KONTAKTA OSS
-          </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="header__nav-link"
-          >
-            <img src={instaG} alt="Instagram" className="header__nav-icon" />
-          </a>
-        </div>
+
+        {windowWidth <= 800 ? (
+          <div className="header__hamburger" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            <div className={`hamburger-icon ${isMobileMenuOpen ? "open" : ""}`}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        ) : (
+          <div className="header__nav">
+            <a href="#home" className="header__nav-link">OM OSS</a>
+            <a href="#about" className="header__nav-link">INOMHUS</a>
+            <a href="#services" className="header__nav-link">UTOMHUS</a>
+            <a href="#contact" className="header__nav-link">KONTAKTA OSS</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="header__nav-link">
+              <img src={instaG} alt="Instagram" className="header__nav-icon" />
+            </a>
+          </div>
+        )}
+
+        {isMobileMenuOpen && (
+          <div className="header__mobile-nav">
+            <div className="header__close" onClick={() => setIsMobileMenuOpen(false)}>
+              &times;
+            </div>
+            <a href="#home" className="header__mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>OM OSS</a>
+            <a href="#about" className="header__mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>INOMHUS</a>
+            <a href="#services" className="header__mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>UTOMHUS</a>
+            <a href="#contact" className="header__mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>KONTAKTA OSS</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="header__mobile-nav-link">
+              <img src={instaG} alt="Instagram" className="header__nav-icon" />
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );
