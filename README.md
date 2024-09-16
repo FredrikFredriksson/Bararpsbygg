@@ -11,4 +11,6 @@ Is a professional carpentry firm specializing in high-quality woodwork, construc
 
 To install the package, use the `npm install` command.
 
+Page will be deployed soon.
+
 
