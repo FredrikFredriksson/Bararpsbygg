@@ -1,3 +1,4 @@
+import React from "react";
 import "./styles.scss";
 import Header from "../../components/Header";
 import Greetings from "../../components/Greeting";
@@ -15,13 +16,13 @@ function Main() {
         <Header />
         <Greetings />
       </div>
-      <div className="info">
+      <div className="info" id="info-section">
         <Info />
       </div>
-      <div className="cards">
+      <div className="cards" id="card-section">
         <Card />
       </div>
-      <div className="banners">
+      <div className="banners" id="banner-section">
         <Banner />
       </div>
       <div className="contacts">
@@ -31,7 +32,7 @@ function Main() {
         <Message />
       </div>
       <div className="footers">
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );

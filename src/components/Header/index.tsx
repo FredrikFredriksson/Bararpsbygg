@@ -7,6 +7,13 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+function scrollToSection(id: string) {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -56,10 +63,9 @@ const Header: React.FC = () => {
           </div>
         ) : (
           <div className="header__nav">
-            <a href="#home" className="header__nav-link">OM OSS</a>
-            <a href="#about" className="header__nav-link">INOMHUS</a>
-            <a href="#services" className="header__nav-link">UTOMHUS</a>
-            <a href="#contact" className="header__nav-link">KONTAKTA OSS</a>
+            <a onClick={() => scrollToSection('info-section')} className="header__nav-link">OM OSS</a>
+            <a onClick={() => scrollToSection('card-section')} className="header__nav-link">INOMHUS</a>
+            <a onClick={() => scrollToSection('banner-section')} className="header__nav-link">KONTAKTA OSS</a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="header__nav-link">
               <img src={instaG} alt="Instagram" className="header__nav-icon" />
             </a>
@@ -71,10 +77,9 @@ const Header: React.FC = () => {
             <div className="header__close" onClick={() => setIsMobileMenuOpen(false)}>
               &times;
             </div>
-            <a href="#home" className="header__mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>OM OSS</a>
-            <a href="#about" className="header__mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>INOMHUS</a>
-            <a href="#services" className="header__mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>UTOMHUS</a>
-            <a href="#contact" className="header__mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>KONTAKTA OSS</a>
+            <a onClick={() => { scrollToSection('info-section'); setIsMobileMenuOpen(false); }} className="header__mobile-nav-link">OM OSS</a>
+            <a onClick={() => { scrollToSection('card-section'); setIsMobileMenuOpen(false); }} className="header__mobile-nav-link">INOMHUS</a>
+            <a onClick={() => { scrollToSection('banner-section'); setIsMobileMenuOpen(false); }} className="header__mobile-nav-link">KONTAKTA OSS</a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="header__mobile-nav-link">
               <img src={instaG} alt="Instagram" className="header__nav-icon" />
             </a>
