@@ -35,3 +35,14 @@
     font-weight: 500;
 }
 
+@media (max-width: 1024px) {
+    .main__greet h2{
+        font-size: 30px;
+        margin: 1rem 0 1rem 0;
+    }
+    .main__greet h3{
+        font-size: 20px;
+     
+    }
+  
+  }

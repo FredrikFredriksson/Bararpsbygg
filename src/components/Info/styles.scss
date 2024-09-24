@@ -34,3 +34,15 @@
     font-size: 41px;
     font-weight: 500;
 }
+
+@media (max-width: 1024px) {
+    .info-section h2{
+       font-size: 34px;
+       margin-bottom: 4rem;
+    }
+    .info-section__subtitle{
+        font-size: 30px;
+    }
+  
+  
+  }
