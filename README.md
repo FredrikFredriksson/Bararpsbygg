@@ -15,4 +15,6 @@ To install the package, simply run the following command:
 ```bash
 npm install
 
+npm run dev
+
 
