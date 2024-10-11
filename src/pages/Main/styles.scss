@@ -52,9 +52,27 @@
   justify-content: center;
   align-items: center;
 }
+.instagram-feed{
+  width: 60%;
 
+}
+
+.insta-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem 0 10rem 0;
+}
 @media (max-width: 1024px) {
   .top{
-    height:50vh;
+    height:70vh;
   }
+
+  .instagram-feed{
+  width: 100%;
+  padding: 1rem;
+  }
+
 }
+

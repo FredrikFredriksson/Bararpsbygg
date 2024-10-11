@@ -1,7 +1,6 @@
 import "./styles.scss";
-import cardImage1 from "../../assets/outside_roof.jpg";
-import cardImage2 from "../../assets/outise_wall.jpg";
-import cardImage3 from "../../assets/stairs.jpg";
+import cardImage1 from "../../assets/indoor.jpg";
+import cardImage2 from "../../assets/outside_roof.jpg";
 
 function Card() {
   return (
@@ -14,7 +13,9 @@ function Card() {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-        ></div>
+        >
+          <p className="card__text">INOMHUS</p>
+        </div>
         <div className="card__right">hej</div>
       </div>
       <div className="card__wrap">
@@ -25,18 +26,9 @@ function Card() {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-        ></div>
-        <div className="card__right">hej</div>
-      </div>
-      <div className="card__wrap">
-        <div
-          className="card__left"
-          style={{
-            backgroundImage: `url(${cardImage3})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        ></div>
+        >
+          <p className="card__text">UTOMHUS</p>
+        </div>
         <div className="card__right">hej</div>
       </div>
     </div>
