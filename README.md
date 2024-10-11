@@ -13,6 +13,8 @@
 
 To install the package, simply run the following command:
 ```bash
+git clone https://github.com/plindstromm/Bararpsbygg.git
+
 npm install
 
 npm run dev
