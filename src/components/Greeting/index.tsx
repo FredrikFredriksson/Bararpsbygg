@@ -1,11 +1,18 @@
 import "./styles.scss";
 
-function Greetings() {
+type GreetingsProps = {
+  scrollToContact: () => void;
+};
+
+function Greetings({ scrollToContact }: GreetingsProps) {
   return (
     <div className="main__greet">
       <h3>DIN PROFESSIONELLA SNICKARE I JÖNKÖPING!</h3>
       <h2>Vi på Bårarps Bygg utför allt inom traditionellt snickeri i Jönköping!</h2>
-      <button className="booking__button">BOKA</button>
+      {/* Add onClick handler to the button */}
+      <button className="booking__button" onClick={scrollToContact}>
+        BOKA
+      </button>
     </div>
   );
 }

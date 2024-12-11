@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./styles.scss";
 import Header from "../../components/Header";
 import Greetings from "../../components/Greeting";
@@ -10,6 +10,8 @@ import Message from "../../components/Message";
 import Footer from "../../components/Footer";
 
 function Main() {
+  const contactRef = useRef<HTMLDivElement | null>(null); 
+
   useEffect(() => {
     // Dynamically load the LightWidget script
     const script = document.createElement("script");
@@ -23,11 +25,18 @@ function Main() {
     };
   }, []);
 
+  // Update the scroll function with a null check
+  const scrollToContact = () => {
+    if (contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="main">
       <div className="top">
         <Header />
-        <Greetings />
+        <Greetings scrollToContact={scrollToContact} />
       </div>
       <div className="insta-wrapper">
         <div className="instagram-feed">
@@ -48,14 +57,13 @@ function Main() {
       <div className="info" id="info-section">
         <Info />
       </div>
-     
       <div className="cards" id="card-section">
         <Card />
       </div>
       <div className="banners" id="banner-section">
         <Banner />
       </div>
-      <div className="contacts">
+      <div className="contacts" ref={contactRef}>
         <Contact />
       </div>
       <div className="messages">

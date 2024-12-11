@@ -1,57 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    --icon-size: 40px; /* Default icon size */
-  }
-  
+  --icon-size: 40px; /* Default icon size */
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1034px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  height: 400px;
+  text-align: center;
+}
+
+.main-container__left,
+.main-container__mid,
+.main-container__right {
+  height: 150px;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main-container__left h4,
+.main-container__mid h4,
+.main-container__right h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Apply the variable for icon sizing */
+.main-container__left img,
+.main-container__mid img,
+.main-container__right img {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
   .main-container {
-    width: 100%;
-    max-width: 1034px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: Roboto;
-    height: 400px;
-    text-align: center;
+    flex-direction: column;
+    height: auto; /* Adjust height for smaller screens */
   }
-  
+
   .main-container__left,
   .main-container__mid,
   .main-container__right {
-    height: 150px;
-    width: 33%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem; /* Add space between sections */
   }
-  
-  /* Apply the variable for icon sizing */
-  .main-container__left img,
-  .main-container__mid img,
-  .main-container__right img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--icon-size); /* Use the variable here */
-    margin-bottom: 2rem;
-    
+}
+
+@media (max-width: 480px) {
+  :root {
+    --icon-size: 25px;
   }
-  
-  @media (max-width: 768px) {
-    :root {
-      --icon-size: 30px; /* Smaller icon size on smaller screens */
-      .main-container {
-     flex-direction: column;
-      }
-      
-    }
+
+  .main-container__left h4,
+  .main-container__mid h4,
+  .main-container__right h4 {
+    font-size: 1rem;
   }
-  
-  @media (max-width: 480px) {
-    :root {
-      --icon-size: 25px; /* Even smaller icon size on very small screens */
-    }
-  }
-  
-  
+}

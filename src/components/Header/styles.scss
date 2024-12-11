@@ -12,6 +12,7 @@
   transition: background-color 0.3s ease-in-out;
   z-index: 10;
 
+
   &--scrolled {
     background-color: #ffffff; // Change to white when scrolled
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Optional: add a shadow for better visual separation
