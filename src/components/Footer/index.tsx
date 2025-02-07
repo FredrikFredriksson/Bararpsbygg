@@ -9,7 +9,7 @@ function Header() {
       </div>
       <div className="footer__container">
         <h5>Adress</h5>
-        <p>Bårarp ängen 24</p>
+        <p>Bårarp ängen 28</p>
         <p>55628 JÖNKÖPING</p>
       </div>
       <div className="footer__container">

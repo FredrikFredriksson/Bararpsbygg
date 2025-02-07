@@ -39,20 +39,18 @@ function Main() {
         <Greetings scrollToContact={scrollToContact} />
       </div>
       <div className="insta-wrapper">
-        <div className="instagram-feed">
-          <iframe
-            src="//lightwidget.com/widgets/21ec8d77755a5a02a14a6cf88795f725.html"
-            scrolling="no"
-            allowTransparency={true}
-            className="lightwidget-widget"
-            style={{
-              width: "100%",
-              border: "0",
-              overflow: "hidden",
-              height: "500px",
-            }}
-          ></iframe>
-        </div>
+        <div
+          className="instagram-feed"
+          dangerouslySetInnerHTML={{
+            __html: `<iframe
+              src="//lightwidget.com/widgets/21ec8d77755a5a02a14a6cf88795f725.html"
+              scrolling="no"
+              allowtransparency="true"
+              class="lightwidget-widget"
+              style="width: 100%; border: 0; overflow: hidden; height: 500px;">
+            </iframe>`,
+          }}
+        />
       </div>
       <div className="info" id="info-section">
         <Info />

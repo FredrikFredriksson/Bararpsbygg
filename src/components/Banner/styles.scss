@@ -1,69 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 .banner {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 3 / 1; // Default aspect ratio
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: aliceblue;
+
+  // Semi-transparent overlay
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    position: relative;
-    aspect-ratio: 3 / 1; /* Default: 16:9 aspect ratio (9 / 16 * 100%) */
-    background-color: bisque;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); // Semi-transparent black
+    z-index: -1; // Ensures the overlay stays behind the text but above the video
+  }
 
-    
-    &__text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 555px;
-        font-family: 'Roboto', sans-serif;
-    }
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; // Ensures video stays behind the overlay
+  }
 
-    &__text h3 {
-        font-size: 35px;
-        font-weight: 500;
-        letter-spacing: .3rem;
-    }
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 555px;
+    font-family: 'Roboto', sans-serif;
+  }
 
-    &__text p {
-        margin-top: 20px;
-        font-weight: 500;
-        line-height: 1.6rem;
-    }
+  &__text h3 {
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+  }
+
+  &__text p {
+    margin-top: 20px;
+    font-weight: 500;
+    line-height: 1.6rem;
+  }
 }
 
 /* Media query for screens 1024px or wider */
 @media (max-width: 1024px) {
-    .banner {
-        &__text h3{
-          font-size: 27px;
-        }
+  .banner {
+    &__text h3 {
+      font-size: 27px;
     }
+  }
 }
 
 @media (max-width: 645px) {
-  .banner{
+  .banner {
     aspect-ratio: 2 / 1;
-    
-    &__text p{
-        font-size: 15px;
-        line-height: 1.2rem;
-        
+
+    &__text p {
+      font-size: 15px;
+      line-height: 1.2rem;
     }
 
-    &__text h3{
-        font-size: 20px;
-        font-weight: 600;
-        letter-spacing: 1px;
+    &__text h3 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 1px;
     }
   }
 }
 
 @media (max-width: 480px) {
-    .banner{
-      aspect-ratio: 1 / 1;
-      
-    
-    }
+  .banner {
+    aspect-ratio: 1 / 1;
   }
+}

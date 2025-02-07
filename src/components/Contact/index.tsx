@@ -22,7 +22,7 @@ function Contact() {
         <div className="icon">
           <img src={pinIcon} alt="Pin Icon" />
         </div>
-        <h4>Bårarp ängen 24</h4>
+        <h4>Bårarp ängen 28</h4>
       </div>
  
     </div>
