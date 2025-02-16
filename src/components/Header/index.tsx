@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./styles.scss";
 import instaG from "/assets/instagram.png";
 import headLogo from "/assets/logga.jpg";
