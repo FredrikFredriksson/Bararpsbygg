@@ -24,7 +24,7 @@ function Card() {
           <p className="card__right__text">
             Bårarps Bygg erbjuder skräddarsydda inomhuslösningar för
             privatpersoner, bostadsföreningar och företag. Vi är experter på
-            golvläggning, snickeri och specialanpassade möbler, alltid med hög
+            golvläggning, och snickeri, alltid med hög
             kvalitet och noggrannhet.
           </p>
         </div>
