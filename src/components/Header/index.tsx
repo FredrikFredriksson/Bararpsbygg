@@ -93,7 +93,7 @@ const Header: React.FC = () => {
               KONTAKTA OSS
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/bararpsbygg/"
               target="_blank"
               rel="noopener noreferrer"
               className="header__nav-link"
@@ -139,7 +139,7 @@ const Header: React.FC = () => {
               KONTAKTA OSS
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/bararpsbygg/"
               target="_blank"
               rel="noopener noreferrer"
               className="header__mobile-nav-link"
