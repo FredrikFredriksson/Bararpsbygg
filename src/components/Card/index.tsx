@@ -1,6 +1,6 @@
 import "./styles.scss";
-import cardImage1 from "../../assets/indoor.jpg";
-import cardImage2 from "../../assets/outside_roof.jpg";
+import cardImage1 from "/assets/indoor.jpg";
+import cardImage2 from "/assets/outside_roof.jpg";
 
 function Card() {
   return (

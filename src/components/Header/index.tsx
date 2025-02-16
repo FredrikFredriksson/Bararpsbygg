@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./styles.scss";
-import instaG from "../../assets/instagram.png";
-import headLogo from "../../assets/logga.jpg";
+import instaG from "/assets/instagram.png";
+import headLogo from "/assets/logga.jpg";
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });

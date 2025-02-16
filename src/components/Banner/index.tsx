@@ -1,5 +1,5 @@
 import "./styles.scss";
-import videoLoop from '../../assets/videoloop.mp4';
+import videoLoop from '/assets/videoloop.mp4';
 
 function Banner() {
   return (

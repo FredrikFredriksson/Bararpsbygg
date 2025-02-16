@@ -1,5 +1,5 @@
 import "./styles.scss";
-import headLogo from "../../assets/logga.jpg";
+import headLogo from "/assets/logga.jpg";
 
 function Header() {
   return (

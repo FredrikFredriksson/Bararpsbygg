@@ -1,7 +1,7 @@
 import "./styles.scss";
-import phoneIcon from "../../assets/phone.png";
-import mailIcon from "../../assets/mail.png";
-import pinIcon from "../../assets/pin.png";
+import phoneIcon from "/assets/phone.png";
+import mailIcon from "/assets/mail.png";
+import pinIcon from "/assets/pin.png";
 
 function Contact() {
   return (
