@@ -43,7 +43,7 @@ function Main() {
           className="instagram-feed"
           dangerouslySetInnerHTML={{
             __html: `<iframe
-              src="//lightwidget.com/widgets/21ec8d77755a5a02a14a6cf88795f725.html"
+              src="https://cdn.lightwidget.com/widgets/21ec8d77755a5a02a14a6cf88795f725.html"
               scrolling="no"
               allowtransparency="true"
               class="lightwidget-widget"
