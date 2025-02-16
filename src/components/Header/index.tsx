@@ -6,7 +6,6 @@ import headLogo from "../../assets/logga.jpg";
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
 function scrollToSection(id: string) {
   const section = document.getElementById(id);
   if (section) {
